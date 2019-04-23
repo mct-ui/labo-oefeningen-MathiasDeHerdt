@@ -35,7 +35,7 @@ html {
     font-family: "Clear Sans web", Helvetica, arial, sans-serif;
     color: white;
     box-sizing: border-box;
-    background-image: linear-gradient(to bottom right, #0A257D, #061649);
+    background: linear-gradient(to bottom right, #0A257D, #061649);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -385,6 +385,14 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+.c-logo {
+    height: 32px;
+}
+
+.c-logo__symbol {
+    height: 100%;
+}
 
 /*------------------------------------*\
   #UTILITIES
