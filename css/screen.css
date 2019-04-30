@@ -403,13 +403,21 @@ a:focus {
     align-items: center;
 }
 
-/* .c-header__nav {
-    display: none;
-} */
+.c-header__nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.c-header__nav--main {
+    flex-grow: 2;
+    justify-content: flex-end;
+}
 
 .c-nav {
-    font-size: 18px;
+    font-size: 12px;
     line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .c-nav--meta {
