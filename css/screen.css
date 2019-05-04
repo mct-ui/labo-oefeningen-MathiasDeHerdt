@@ -1,20 +1,21 @@
 /*------------------------------------*\
   #FONTS
 \*------------------------------------*/
+
 @font-face {
-    font-family: "Clear Sans web";
+    font-family: "Clear Sans";
     font-weight: 200;
-    src: url("../fonts/ClearSans-Light-webfont.woff") format("woff");
+    src:url("../fonts/ClearSans-Light-webfont.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Clear Sans web";
+    font-family: "Clear Sans";
     font-weight: 400;
     src: url("../fonts/ClearSans-Medium-webfont.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Clear Sans web";
+    font-family: "Clear Sans";
     font-weight: 600;
     src: url("../fonts/ClearSans-Regular-webfont.woff") format("woff");
 }
@@ -30,12 +31,12 @@
 */
 
 html {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
-    font-family: "Clear Sans web", Helvetica, arial, sans-serif;
+    font-family: "Clear Sans", Helvetica, arial, sans-serif;
     color: white;
+    background-image: linear-gradient(to bottom right, #061649 0%, #0A257D 100%);
     box-sizing: border-box;
-    background: linear-gradient(to bottom right, #0A257D, #061649);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -224,7 +225,7 @@ a:focus {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 56.4em; /* 56.4 * 20px = 1128px */
+    max-width: 71em; /* 71 * 18px = 1128px */
 }
 
 /*
@@ -394,39 +395,17 @@ a:focus {
     height: 100%;
 }
 
-
-
-
-.c-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.c-header__nav {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.c-header__nav--main {
-    flex-grow: 2;
-    justify-content: flex-end;
-}
-
 .c-nav {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 24px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.c-nav--meta {
-    font-size: 16px;
-}
-
-.c-nav__link {
+.c-nav__link{
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 600;
     display: block;
     padding: 8px 0;
 }
@@ -437,29 +416,103 @@ a:focus {
     color: white;
 }
 
-.c-nav__link--meta,
-.c-nav__link--meta:visited,
-.c-nav__link--meta:active {
-    color: #6C6C75;
-}
-
-.is-selected .c-nav__link,
 .c-nav__link:hover,
 .c-nav__link:focus {
-    color: #5051db;
+    text-shadow:0 0 8px white;
+    color: #DBEDFF;
 }
 
 @media (min-width: 768px) {
     .c-nav__list {
         display: flex;
-        margin-left: -16px;
-        margin-right: -16px;
+        align-items: center;
     }
 
     .c-nav__link {
         padding: 8px 16px;
     }
 }
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header{
+}
+
+.c-header__nav {
+}
+
+@media (min-width: 768px) {
+    .c-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .c-header__nav {
+    }
+}
+
+/* Component tekstblokken max breedte */
+
+.c-width{
+    max-width: 32em;
+}
+
+.c-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-image: linear-gradient(to right, #0053FB 0%, #033AA7 51%, #0053FB 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    padding: 16px 30px;
+    box-shadow: 0px 0px 10px 0px rgba(17,149,255,0.3);
+}
+
+.c-btn--nav{
+    padding: 16px 33px;
+    margin-left: 16px;
+}
+
+.c-btn:visited{
+    color: white;
+}
+
+.c-btn:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+/*
+    Component: figure
+*/
+
+.c-figure{
+    position: relative
+}
+
+.c-figure__desc{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    margin-top: 0px;
+    padding: 12px 12px 12px 20px;
+    max-width: 232px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #231F20;
+    border-right: 5px solid #5051DB;
+    background-color: white;
+
+}
+
 
 /*------------------------------------*\
   #UTILITIES
